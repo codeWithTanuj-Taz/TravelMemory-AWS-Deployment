@@ -42,10 +42,8 @@ Register the frontend EC2 instances with the target group.
 
 ### Screenshot
 
-<img width="758" height="307" alt="image" src="https://github.com/user-attachments/assets/32be8dff-281b-4ad9-919b-c6c7fdcbdd04" />
-
 Select as pending below 
----
+
 <img width="783" height="428" alt="Screenshot 2026-07-08 152034" src="https://github.com/user-attachments/assets/342772da-abdc-4484-a60f-83e5d930400f" />
 
 ## Step 3 – Create the Application Load Balancer
