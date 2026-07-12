@@ -1,49 +1,116 @@
-# Travel Memory
+# 🌍 Travel Memory - AWS Deployment
 
-`.env` file to work with the backend after creating a database in mongodb: 
+## 📌 Project Overview 
+
+A full-stack MERN (MongoDB, Express.js, React, Node.js) web application for managing travel experiences.
+
+This repository demonstrates the deployment of the application on AWS using industry-standard cloud practices, including:
+
+- Application deployment
+- Amazon EC2
+- Virtual Private Cloud 
+- Security group
+- Target group
+- Load balancing using AWS Application Load Balancer (ALB)
+- Reverse proxy configuration with Nginx
+- Process management using PM2
+- Cloud database integration with MongoDB Atlas
+- Custom domain configuration using Cloudflare
+
+---
+
+## ✨ Application Features
+
+- Add travel memories
+- View travel experiences
+- RESTful API using Express.js
+- MongoDB Atlas integration
+- Responsive React frontend
+
+## ☁️ Deployment Features
+
+- AWS EC2 deployment
+- AWS Application Load Balancer
+- Nginx reverse proxy
+- PM2 process management
+- Cloudflare DNS
+- Custom domain integration
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| Frontend | React |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| Web Server | Nginx |
+| Process Manager | PM2 |
+| Cloud | AWS EC2 |
+| Load Balancer | AWS Application Load Balancer |
+| DNS | Cloudflare |
+| Domain Registrar | GoDaddy |
+
+---
+
+## 📂 Project Structure
 
 ```
-MONGO_URI='ENTER_YOUR_URL'
-PORT=3001
+TravelMemory-AWS-Deployment/
+│
+├── frontend/                 # React application
+├── backend/                  # Node.js + Express API
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
-Data format to be added: 
+---
 
-```json
-{
-    "tripName": "Incredible India",
-    "startDateOfJourney": "19-03-2022",
-    "endDateOfJourney": "27-03-2022",
-    "nameOfHotels":"Hotel Namaste, Backpackers Club",
-    "placesVisited":"Delhi, Kolkata, Chennai, Mumbai",
-    "totalCost": 800000,
-    "tripType": "leisure",
-    "experience": "Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, ",
-    "image": "https://t3.ftcdn.net/jpg/03/04/85/26/360_F_304852693_nSOn9KvUgafgvZ6wM0CNaULYUa7xXBkA.jpg",
-    "shortDescription":"India is a wonderful country with rich culture and good people.",
-    "featured": true
-}
+## ☁️ AWS Deployment Architecture
+
 ```
-
-
-For frontend, you need to create `.env` file and put the following content (remember to change it based on your requirements):
-```bash
-REACT_APP_BACKEND_URL=http://localhost:3001
+                         🌐 Internet
+                                │
+                                ▼
+                    ☁️ Cloudflare (DNS/CDN)
+                                │
+                                ▼
+          ⚖️ AWS Application Load Balancer (HTTP :80)
+                                │
+               ┌────────────────┴────────────────┐
+               │                                 │
+               ▼                                 ▼
+      🖥️ Frontend EC2 - 1                🖥️ Frontend EC2 - 2
+            Ubuntu                             Ubuntu
+             Nginx                              Nginx
+          React Build                       React Build
+               │                                 │
+               │ API Calls                       │ API Calls
+               ▼                                 ▼
+      ⚙️ Backend EC2 - 1                 ⚙️ Backend EC2 - 2
+            Ubuntu                             Ubuntu
+         Node.js + PM2                     Node.js + PM2
+               │                                 │
+               └───────────────┬─────────────────┘
+                               │
+                               ▼
+                    🍃 MongoDB Atlas (Cloud)
 ```
+---
 
-## How to run BE
+## 📖 Deployment Guide
 
-Note: Make sure you have the .env file already added
-```bash
-cd backend
-npm install
-node index.js
-```
+A detailed deployment guide with screenshots is available in the **docs/** directory.
 
-## How to run FE
-Note: Make sure you have the .env file already added
-```bash
-cd frontend
-npm install
-npm start
-```
+| Guide | Description |
+|--------|-------------|
+| 01-Architecture | AWS architecture overview |
+| 02-EC2-Setup | EC2 instance creation and configuration |
+| 03-Backend-Setup | Deploying the backend |
+| 04-Frontend-Setup | Deploying the frontend |
+| 05-Nginx-Configuration | Configuring Nginx |
+| 06-PM2-Configuration | Running backend with PM2 |
+| 07-Load-Balancer | ALB setup and target groups |
+| 08-Cloudflare-Domain | Domain and DNS configuration |
+| 09-Troubleshooting | Common deployment issues and fixes |
