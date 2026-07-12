@@ -110,7 +110,7 @@ http://<Frontend-EC2-1-Public-IP>
 ```
 ### Screenshot
 <img width="437" height="416" alt="Screenshot 2026-07-08 140531" src="https://github.com/user-attachments/assets/d7f655e0-63f4-4a76-90b5-dd7d77937fd3" />
----
+
 ## Summary
 
 The React frontend has been successfully deployed on AWS EC2 and is served using Nginx. 
