@@ -101,7 +101,7 @@ TravelMemory-AWS-Deployment/
 
 ## 📖 Deployment Guide
 
-A detailed deployment guide with screenshots is available in the **docs/** directory.
+## A detailed deployment guide with screenshots is available in the **docs/** directory.
 
 | Guide | Description |
 |--------|-------------|
