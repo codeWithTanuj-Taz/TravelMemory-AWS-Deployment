@@ -121,6 +121,7 @@ After the installation completes successfully, the backend application is ready 
 <img width="646" height="31" alt="Screenshot 2026-07-12 173544" src="https://github.com/user-attachments/assets/4de6dbec-d2f4-422c-bd57-45901cfb0a15" />
 <img width="518" height="36" alt="Screenshot 2026-07-12 173659" src="https://github.com/user-attachments/assets/f702d650-8573-4642-b471-7aeeab277b3d" />
 <img width="477" height="53" alt="Screenshot 2026-07-12 173729" src="https://github.com/user-attachments/assets/daafdfda-bb86-4ff2-beb2-73b51344637c" />
+<img width="473" height="209" alt="image" src="https://github.com/user-attachments/assets/681100f1-7f3e-4261-8907-5cc1ff52cfdd" />
 
 
 ---
@@ -224,8 +225,9 @@ Checks performed:
 > <img width="815" height="146" alt="image" src="https://github.com/user-attachments/assets/4f950ce0-6af1-4e9d-baec-99027829546a" />
 <img width="869" height="143" alt="image" src="https://github.com/user-attachments/assets/853a3597-047d-4376-a56f-3cbc4d9e2ef0" />
 
-
 ---
+
+## Redo the steps to configure second 2nd ec2 Backend instance 
 
 ## Summary
 
