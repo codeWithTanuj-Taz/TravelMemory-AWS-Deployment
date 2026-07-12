@@ -48,8 +48,7 @@ sudo apt upgrade -y
 ## Step 3 – Install Dependencies
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x
-sudo -E bash
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
 sudo apt install -y nodejs git nginx
 sudo npm install -g pm2
 ```
