@@ -115,4 +115,5 @@ http://<Frontend-EC2-1-Public-IP>
 
 The React frontend has been successfully deployed on AWS EC2 and is served using Nginx. 
 The next step is to configure the AWS Application Load Balancer and route traffic to the frontend instances.
-Repeat the same step to setup 2nd frontend ec2 Instance
+
+## Repeat the same step to setup 2nd frontend ec2 Instance
